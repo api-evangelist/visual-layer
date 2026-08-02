@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.visual-layer.com/api-reference/ (auth + errors + api-intro)
+standards:
+- id: rest-json
+  conforms: true
+  evidence: All endpoints are REST-based and return JSON.
+- id: jwt-bearer
+  conforms: true
+  evidence: Cloud API uses HS256 JWT bearer tokens in the Authorization header.
+- id: oauth2
+  conforms: false
+  evidence: No OAuth 2.0 authorization/token flow; JWTs are self-signed client-side from an API key/secret.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors return a single custom `detail` JSON field (FastAPI-style), not application/problem+json.
+- id: rfc8594-sunset-deprecation
+  conforms: false
+  evidence: No documented Sunset/Deprecation header support.
+- id: async-202-polling
+  conforms: true
+  evidence: Long-running operations return 202 Accepted and are polled via the dataset status endpoint.
+- id: openapi
+  conforms: false
+  evidence: No published OpenAPI/Swagger specification was found.
+compliance_program:
+  published: false
+  note: No SOC 2 / ISO 27001 / PCI / HIPAA / FedRAMP trust center or compliance certifications were
+    found via probe or documentation search.

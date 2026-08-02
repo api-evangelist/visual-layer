@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/project/fastdup/ + https://pypi.org/project/visuallayer/ + https://github.com/visual-layer
+packages:
+- language: python
+  registry: pypi
+  name: fastdup
+  url: https://pypi.org/project/fastdup/
+  install: pip install fastdup
+  official: true
+  repo: https://github.com/visual-layer/fastdup
+  description: Fast, free tool for generating insights, deduplication, and quality analysis from large
+    image and video datasets. Visual Layer's flagship open-source library.
+- language: python
+  registry: pypi
+  name: visuallayer
+  url: https://pypi.org/project/visuallayer/
+  install: pip install visuallayer
+  official: true
+  repo: https://github.com/visual-layer/vl-datasets
+  description: Open, clean datasets for computer vision — access to Visual Layer's curated public dataset
+    catalog.
+notes: The Visual Layer Cloud API is consumed directly over REST (JWT bearer auth); Visual Layer does not
+  publish a dedicated versioned cloud API client SDK on npm/PyPI. No first-party JavaScript, Go, Java,
+  Ruby, PHP, .NET, or Rust client library was found on npm, Maven Central, NuGet, pkg.go.dev, RubyGems,
+  Packagist, or crates.io as of this pass.

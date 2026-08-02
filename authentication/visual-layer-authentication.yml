@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.visual-layer.com/api-reference/authentication
+docs: https://docs.visual-layer.com/api-reference/authentication
+summary:
+  types: [http, apiKey]
+  http_schemes: [bearer]
+  bearer_format: JWT
+  api_key_provisioning: session-authenticated
+  oauth2_flows: []
+  note: Authentication requirements differ by deployment. The Visual Layer Cloud API requires a
+    short-lived JWT bearer token on every request. On-premises deployments require no authentication and
+    omit the Authorization header entirely.
+schemes:
+- name: cloudJwtBearer
+  type: http
+  scheme: bearer
+  bearer_format: JWT
+  applies_to: Visual Layer Cloud API (app.visual-layer.com)
+  description: JWT bearer token passed in the Authorization header on every request. Tokens are
+    short-lived and self-signed (HS256) client-side from an API key and secret; regenerate periodically.
+  header: 'Authorization: Bearer <jwt>'
+  algorithm: HS256
+  token_claims: {sub: api_key, iat: issued-at, exp: expiry, iss: sdk, kid: api_key}
+- name: apiKeySecret
+  type: apiKey
+  in: cookie/session
+  description: API key and secret pair used to sign the JWT. Retrieved from the API credentials endpoint
+    (GET /api/v1/api_credentials) while authenticated in the browser session. The secret is shown only
+    once; contact support@visual-layer.com to recover.
+  credentials_endpoint: https://app.visual-layer.com/api/v1/api_credentials
+- name: onPremNoAuth
+  type: none
+  applies_to: On-premises / self-hosted deployments
+  description: On-premises API calls require no authentication; authorization headers are omitted from
+    all requests.
+flows:
+  cloud: |
+    1. Log in at https://app.visual-layer.com and call GET /api/v1/api_credentials to obtain api_key + api_secret (secret shown once).
+    2. Sign a short-lived HS256 JWT locally with headers {alg: HS256, typ: JWT, kid: api_key} and payload {sub: api_key, iat, exp, iss: sdk}.
+    3. Send the JWT as `Authorization: Bearer <jwt>` on every Cloud API request.

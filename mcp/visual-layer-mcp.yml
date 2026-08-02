@@ -1,0 +1,52 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: https://docs.visual-layer.com/api-reference/ (documented REST operations)
+note: No official hosted or packaged Model Context Protocol server was found for Visual Layer (no
+  @modelcontextprotocol package, no registry entry, no docs reference). The tool list below is a
+  CANDIDATE surface derived from the documented Cloud API operations to guide a future MCP server; no
+  OpenAPI spec exists to bind operationIds, so tools reference the API reference pages.
+server:
+  name: visual-layer
+  transport: http
+  url: null
+tools:
+- name: create_dataset_from_s3
+  description: Create a new dataset by pointing to a public or private S3 bucket.
+  source: https://docs.visual-layer.com/api-reference/create-a-dataset-from-a-public-s3-bucket
+- name: create_dataset_from_local_files
+  description: Create a new dataset by uploading local images or videos.
+  source: https://docs.visual-layer.com/api-reference/create-a-dataset-from-local-files
+- name: add_media_to_dataset
+  description: Add images or videos to an existing dataset (S3, upload, or archive).
+  source: https://docs.visual-layer.com/api-reference/add-media-to-existing-dataset
+- name: get_dataset_status
+  description: Retrieve processing status and metadata for a dataset by id.
+  source: https://docs.visual-layer.com/api-reference/retrieve-dataset-status
+- name: semantic_search
+  description: Search a dataset with natural-language captions or VQL text filters.
+  source: https://docs.visual-layer.com/api-reference/semantic-search
+- name: visual_search
+  description: Find visually similar media by query image or existing media reference.
+  source: https://docs.visual-layer.com/api-reference/visual-search
+- name: enrich_dataset
+  description: Apply AI models to generate captions, detect objects, and build embeddings.
+  source: https://docs.visual-layer.com/api-reference/enrichment
+- name: export_dataset
+  description: Export dataset metadata and media as JSON or Parquet, full or selective.
+  source: https://docs.visual-layer.com/api-reference/exporting-a-dataset-via-curl-from-visual-layer
+- name: manage_saved_views
+  description: Create, list, and delete saved views and retrieve monitoring trend data.
+  source: https://docs.visual-layer.com/api-reference/saved-views
+- name: manage_snapshots
+  description: Create, list, update, restore, clone, and delete dataset snapshots.
+  source: https://docs.visual-layer.com/api-reference/snapshots
+- name: manage_tasks
+  description: List, filter, abort, and retry dataset tasks.
+  source: https://docs.visual-layer.com/api-reference/task-manager
+- name: list_notifications
+  description: List, read, and manage alert notifications from monitored saved views.
+  source: https://docs.visual-layer.com/api-reference/notifications
+- name: share_dataset
+  description: Grant another registered user access to a dataset.
+  source: https://docs.visual-layer.com/api-reference/share-a-dataset-with-another-user

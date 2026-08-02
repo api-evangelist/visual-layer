@@ -1,8 +1,27 @@
 aid: visual-layer
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/visual-layer.png
 name: Visual Layer
-description: Visual Layer is a company surfaced as a portfolio company of insight-partners and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: Visual Layer is an AI-powered platform for managing, curating, and enriching large-scale
+  unstructured visual data (images and video) at scales from gigabytes to petabytes. Its cloud and
+  self-hosted products let teams organize, explore, deduplicate, quality-check, and semantically search
+  visual datasets, then enrich them with vision AI models that generate captions, detect objects, and
+  build embeddings for search. Visual Layer exposes a REST API — JWT-authenticated for the cloud,
+  unauthenticated for on-premises — covering dataset creation from S3 or local files, visual and semantic
+  search, enrichment, export, saved views with monitoring and alerting, snapshots, and task management.
+  The company also maintains the popular open-source fastdup tool, is backed by Insight Partners, and was
+  acquired by Camtek in 2025.
 url: https://raw.githubusercontent.com/api-evangelist/visual-layer/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,15 +31,95 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
 tags:
 - Company
-apis: []
+- Computer Vision
+- Machine Learning
+- Data Management
+- Dataset Curation
+- Unstructured Data
+- Images
+- Video
+- Semantic Search
+- AI
+apis:
+- name: Visual Layer Cloud API
+  description: REST API for dataset management, visual and semantic search, enrichment, export, saved
+    views, snapshots, and task management. Cloud calls require a JWT bearer token; on-premises calls
+    require no authentication.
+  humanURL: https://docs.visual-layer.com/api-reference/api-intro
+  baseURL: https://app.visual-layer.com
+  tags:
+  - Computer Vision
+  - Dataset Management
+  - Semantic Search
+  - Enrichment
+  properties:
+  - type: APIReference
+    url: https://docs.visual-layer.com/api-reference/api-intro
+  - type: Authentication
+    url: authentication/visual-layer-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/visual-layer-domain-security.yml
 - type: Website
   url: https://visual-layer.com/
+- type: DeveloperPortal
+  url: https://docs.visual-layer.com/
+- type: Documentation
+  url: https://docs.visual-layer.com/
+- type: APIReference
+  url: https://docs.visual-layer.com/api-reference/api-intro
+- type: GettingStarted
+  url: https://docs.visual-layer.com/docs/introduction/introduction
+- type: Quickstart
+  url: https://docs.visual-layer.com/docs/quick-start/navigating-visual-layer
+- type: Blog
+  url: https://visual-layer.com/blog
+- type: Support
+  url: https://docs.visual-layer.com/docs/Help-Support/faqs
+- type: Community
+  url: https://discord.com/invite/tkYHJCA7mb
+- type: GitHubOrganization
+  url: https://github.com/visual-layer
+- type: SignUp
+  url: https://app.visual-layer.com/free-trial
+- type: Login
+  url: https://app.visual-layer.com/login
+- type: TermsOfService
+  url: https://docs.visual-layer.com/docs/terms-of-service
+- type: PrivacyPolicy
+  url: https://docs.visual-layer.com/docs/privacy-policy
+- type: LLMsTxt
+  url: llms/visual-layer-llms.txt
+- type: Packages
+  url: packages/visual-layer-packages.yml
+- type: SDKs
+  url: packages/visual-layer-packages.yml
+- type: Authentication
+  url: authentication/visual-layer-authentication.yml
+- type: ErrorCatalog
+  url: errors/visual-layer-problem-types.yml
+- type: Conventions
+  url: conventions/visual-layer-conventions.yml
+- type: Conformance
+  url: conformance/visual-layer-conformance.yml
+- type: Lifecycle
+  url: lifecycle/visual-layer-lifecycle.yml
+- type: DataModel
+  url: data-model/visual-layer-data-model.yml
+- type: Components
+  url: components/visual-layer-components.yml
+- type: MCPServer
+  url: mcp/visual-layer-mcp.yml

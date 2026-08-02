@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.visual-layer.com/api-reference/errors
+format: custom
+envelope:
+  field: detail
+  content_type: application/json
+  shape: '{ "detail": "<human-readable message>" }'
+  note: Visual Layer does NOT use RFC 9457 application/problem+json. Every error returns a JSON body with
+    a single `detail` string field (FastAPI-style). Standard HTTP status codes convey error class.
+problems:
+- status: 200
+  meaning: Success.
+- status: 202
+  meaning: Accepted — request received, processing started asynchronously.
+- status: 400
+  title: Bad Request
+  meaning: Check your request parameters.
+- status: 401
+  title: Unauthorized
+  meaning: Your JWT token is missing, invalid, or expired.
+  remediation: Regenerate the JWT bearer token (see authentication/visual-layer-authentication.yml).
+- status: 403
+  title: Forbidden
+  meaning: Insufficient permissions or feature disabled.
+- status: 404
+  title: Not Found
+  meaning: Resource does not exist or you do not have access.
+- status: 409
+  title: Conflict
+  meaning: Resource state prevents the operation (for example, dataset not in READY status).
+  remediation: Poll the dataset status endpoint until status_new reaches READY, then retry.
+- status: 422
+  title: Unprocessable Entity
+  meaning: Invalid parameter format or value.
+- status: 500
+  title: Internal Server Error
+  meaning: Contact support if this persists.
+handling:
+  pattern: All documented code examples call raise_for_status(); read the JSON `detail` field on 4xx/5xx.

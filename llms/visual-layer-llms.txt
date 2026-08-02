@@ -1,0 +1,109 @@
+# Visual Layer Documentation
+
+## Docs
+
+- [Add Media to an Existing Dataset](https://docs.visual-layer.com/api-reference/add-media-to-existing-dataset.md): Add new images or videos to an existing dataset using the Add Media API. Supports S3 bulk paths, direct file uploads, and archive uploads.
+- [Admin Settings](https://docs.visual-layer.com/api-reference/admin-settings.md): View and update runtime configuration settings on self-hosted Visual Layer deployments.
+- [API Introduction](https://docs.visual-layer.com/api-reference/api-intro.md): An overview of the Visual Layer REST API — search, enrichment, export, and dataset management.
+- [Authentication](https://docs.visual-layer.com/api-reference/authentication.md): Retrieve cloud API credentials and generate JWT tokens for authenticated Visual Layer Cloud API access with examples.
+- [Create a Dataset from a Local Folder for On-Prem Installations](https://docs.visual-layer.com/api-reference/create-a-dataset-from-a-local-folder-for-on-prem-installation.md): Use this API to trigger dataset creation from a local folder on self-hosted Visual Layer installations.
+- [Create a Dataset from an S3 Bucket](https://docs.visual-layer.com/api-reference/create-a-dataset-from-a-public-s3-bucket.md): Create a new Visual Layer dataset by pointing to a public or private S3 bucket using the cloud API.
+- [Create a Dataset from Local Files](https://docs.visual-layer.com/api-reference/create-a-dataset-from-local-files.md): Upload images or videos from your local machine to create a new Visual Layer dataset using the cloud ingestion API.
+- [Duplicate Retrieval](https://docs.visual-layer.com/api-reference/duplicate-retrieval-experimental-feature.md): Find visually duplicate or near-duplicate media in your dataset using VQL filters or threshold parameters on the Explore endpoint.
+- [Enrichment](https://docs.visual-layer.com/api-reference/enrichment.md): Apply AI models to a dataset to generate captions, detect objects, and build embeddings for semantic search.
+- [Error Handling](https://docs.visual-layer.com/api-reference/errors.md): HTTP status codes, error response format, and Python error handling patterns for the Visual Layer API.
+- [Exporting a Dataset](https://docs.visual-layer.com/api-reference/exporting-a-dataset-via-curl-from-visual-layer.md): Export dataset metadata and media using the Visual Layer API—supports full dataset export and selective export by cluster or media ID.
+- [Notifications](https://docs.visual-layer.com/api-reference/notifications.md): List, read, and manage alert notifications triggered by monitored saved views.
+- [Retrieve Dataset Status](https://docs.visual-layer.com/api-reference/retrieve-dataset-status.md): Check the processing status and metadata for a dataset using its unique dataset ID.
+- [Running Visual Layer Within an Iframe](https://docs.visual-layer.com/api-reference/running-visual-layer-within-an-iframe.md): Embed Visual Layer search in your web app with iframe integration and seamless user authentication.
+- [Saved Views, Monitoring, and Alerting](https://docs.visual-layer.com/api-reference/saved-views.md): Create, list, and delete saved views. Retrieve monitoring trend data and control alert delivery for monitored views.
+- [Semantic Search](https://docs.visual-layer.com/api-reference/semantic-search.md): Search your dataset using natural language captions or AI-powered semantic similarity—powered by enrichment models.
+- [Share a Dataset with Another User](https://docs.visual-layer.com/api-reference/share-a-dataset-with-another-user.md): Grant another registered user access to your dataset using the Visual Layer sharing API.
+- [Snapshots](https://docs.visual-layer.com/api-reference/snapshots.md): Create, list, update, restore, clone, and delete dataset snapshots for version control and safe rollbacks.
+- [Task Manager](https://docs.visual-layer.com/api-reference/task-manager.md): List, filter, abort, and retry dataset tasks programmatically.
+- [User Management](https://docs.visual-layer.com/api-reference/user-management.md): Create, update, delete, and manage users on self-hosted Visual Layer deployments.
+- [Visual Search](https://docs.visual-layer.com/api-reference/visual-search.md): Search for visually similar images by uploading a query image or referencing an existing media item in your dataset.
+- [Workspaces & Organizations](https://docs.visual-layer.com/api-reference/workspaces.md): List workspaces and organizations, view members, and manage workspace roles on self-hosted deployments.
+- [Explore Model Catalog](https://docs.visual-layer.com/docs/Dataset-Enrichment/model-catalog.md): Browse all available enrichment models in Visual Layer's catalog and learn how each can enhance your dataset.
+- [Find FAQs](https://docs.visual-layer.com/docs/Help-Support/faqs.md)
+- [Amazon S3 Integration](https://docs.visual-layer.com/docs/Integrations/Amazon-s3.md): Configure IAM policies and roles to securely connect Visual Layer with your private S3 buckets.
+- [Google Cloud Storage Integration](https://docs.visual-layer.com/docs/Integrations/google-cloud-storage.md): Access GCP buckets from on-premise machines using command-line tools or filesystem mounting.
+- [Dataset Snapshots](https://docs.visual-layer.com/docs/advanced-dataset-management/dataset-snapshots.md): Create, restore, and clone named checkpoints of your dataset state for version control and safe rollbacks.
+- [Enrich Your Datasets with AI Models](https://docs.visual-layer.com/docs/advanced-dataset-management/enrich-overview.md): Select AI models to enrich your dataset with labels, captions, and metadata using Visual Layer's enrichment flow.
+- [Export Dataset](https://docs.visual-layer.com/docs/advanced-dataset-management/export-dataset.md): Export your data from Visual Layer to use in external tools or workflows. You can export the entire dataset, a filtered subset, or just specific items—depending on your needs.
+- [Import Annotations](https://docs.visual-layer.com/docs/advanced-dataset-management/importing-annotations.md): Import pre-existing annotation files into Visual Layer using supported formats including CSV, Parquet, JSON, COCO, and YOLO.
+- [Custom Metadata](https://docs.visual-layer.com/docs/advanced-features/custom-metadata.md): Developer guide for importing custom metadata using user-defined fields to enhance dataset search and filtering.
+- [DICOM Converter Script](https://docs.visual-layer.com/docs/advanced-features/dicom-converter.md): Python script for converting DICOM medical imaging files to JPG format while extracting comprehensive metadata for Visual Layer datasets.
+- [Monitoring and Alerts](https://docs.visual-layer.com/docs/advanced-features/notifications.md): Track how saved view results change over time and receive real-time alerts when new data matches your filter criteria.
+- [User Tags](https://docs.visual-layer.com/docs/advanced-features/tag-iteams.md): Use tags to organize datasets, manage workflows, and simplify relabeling or exclusion for training pipelines.
+- [Task Manager](https://docs.visual-layer.com/docs/advanced-features/task-manager.md): Monitor and manage all dataset operations including creation, enrichment, and processing tasks.
+- [Saved Views](https://docs.visual-layer.com/docs/collab-and-downstream/saved-views.md): Create, monitor, share, and manage named filter queries that dynamically track matching results across your dataset.
+- [Share Datasets](https://docs.visual-layer.com/docs/collab-and-downstream/share-dataset.md): Enable seamless collaboration by securely sharing datasets with internal teammates or external partners.
+- [Data Tab](https://docs.visual-layer.com/docs/explore-and-search/dataset-interface-data-tab.md): Reference for the Data tab inside a Visual Layer dataset — setup checklist, media preview, and activity log.
+- [Enrich Tab](https://docs.visual-layer.com/docs/explore-and-search/dataset-interface-enrich-tab.md): Reference for the Enrich tab inside a Visual Layer dataset — model selection and enrichment progress tracking.
+- [Explore Tab](https://docs.visual-layer.com/docs/explore-and-search/dataset-interface-explore-tab.md): Reference for every panel, control, and action inside the Explore tab of a Visual Layer dataset.
+- [Dataset Interface Reference](https://docs.visual-layer.com/docs/explore-and-search/dataset-interface-reference.md): A complete reference to every tab, panel, control, and action in the Visual Layer dataset workspace.
+- [Views Tab](https://docs.visual-layer.com/docs/explore-and-search/dataset-interface-views-tab.md): Reference for the Views tab inside a Visual Layer dataset — saved filter combinations, monitoring, and sharing.
+- [How Search & Filter Work](https://docs.visual-layer.com/docs/explore-and-search/explore-theory.md): Explore the computer vision concepts and embedding technologies that power Semantic Search, Visual Similarity, and automated quality curation.
+- [Exploration Recipes](https://docs.visual-layer.com/docs/explore-and-search/recipes.md): Step-by-step guides for common dataset curation workflows, from defect detection to training set cleanup.
+- [How to Search & Filter](https://docs.visual-layer.com/docs/explore-and-search/using-search-filter.md): Run searches and filters in Visual Layer using semantic search, visual similarity, and metadata filters, with a full list of available options.
+- [Visual Search](https://docs.visual-layer.com/docs/explore-and-search/visual-search.md): Find visually similar images, objects, or cropped regions in your dataset using Visual Layer's similarity search.
+- [VL Chat](https://docs.visual-layer.com/docs/explore-and-search/vl-chat.md): Explore and search your visual datasets using natural language queries with VL Chat's conversational interface.
+- [What is Visual Layer?](https://docs.visual-layer.com/docs/introduction/introduction.md)
+- [Key Concepts](https://docs.visual-layer.com/docs/introduction/key-concepts.md): Essential concepts and terminology for understanding Visual Layer's platform and features.
+- [Deploying Visual Layer](https://docs.visual-layer.com/docs/introduction/prerequisites.md): Choose your deployment option and review requirements for using Visual Layer.
+- [Privacy policy](https://docs.visual-layer.com/docs/privacy-policy.md)
+- [Exploring Datasets](https://docs.visual-layer.com/docs/quick-start/dataset-exploration-ux.md): Understand the Dataset Exploration View and use a systematic workflow to curate high-quality visual collections.
+- [Dataset Cards Grid](https://docs.visual-layer.com/docs/quick-start/dataset-inventory-dataset-cards.md): Understand dataset card components, status indicators, and available actions in the Dataset Inventory.
+- [Search and Filter](https://docs.visual-layer.com/docs/quick-start/dataset-inventory-main-panel.md): Search datasets by name and apply filters to narrow your dataset view.
+- [About the Dataset Inventory](https://docs.visual-layer.com/docs/quick-start/dataset-inventory-ux.md): Navigate the Dataset Inventory home page and manage your datasets efficiently.
+- [Navigating Visual Layer](https://docs.visual-layer.com/docs/quick-start/navigating-visual-layer.md): Understand Visual Layer's interface structure and navigation patterns.
+- [Create a Dataset](https://docs.visual-layer.com/docs/quick-start/tutorial-create-dataset.md): Creating and indexing your first dataset in Visual Layer.
+- [Understanding Clusters](https://docs.visual-layer.com/docs/quick-start/understanding-clusters.md): How Visual Layer automatically groups visually similar content to simplify exploration and analysis.
+- [Release Notes & Updates](https://docs.visual-layer.com/docs/release-notes/release-notes.md): Stay up-to-date with the latest features, enhancements, and bug fixes in Visual Layer. This page provides a comprehensive changelog of all product updates.
+- [General Settings](https://docs.visual-layer.com/docs/self-hosting/Configuration.md): Customize Visual Layer behavior through config.json, environment files, and environment variable overrides for self-hosted deployments.
+- [Self-Hosting System Requirements](https://docs.visual-layer.com/docs/self-hosting/System_requirements.md): Hardware, software, and GPU requirements for installing Visual Layer on-premises with dependencies and permissions.
+- [Air-Gapped Environment Installation](https://docs.visual-layer.com/docs/self-hosting/air-gapped-installation.md): This tutorial explains how to download Docker containers from DockerHub and install the Visual Layer system in isolated, air-gapped environments
+- [Configuration](https://docs.visual-layer.com/docs/self-hosting/configuration-overview.md): Configure Visual Layer for self-hosted deployments through config.json, environment files, and S3 storage settings.
+- [Expiration](https://docs.visual-layer.com/docs/self-hosting/expiration.md)
+- [Basic Operations](https://docs.visual-layer.com/docs/self-hosting/operation.md): Start, stop, and connect to Visual Layer with basic dataset creation and logging commands.
+- [The VL Profiler Script: run_profiler.sh](https://docs.visual-layer.com/docs/self-hosting/profiler.md): Enable processing and profiling of image datasets for the Visual Layer platform.
+- [S3 Configuration](https://docs.visual-layer.com/docs/self-hosting/s3-configuration.md): This tutorial explains key configuration flags used in the Visual Layer platform to allow indexing and serving images from S3.
+- [Set Up the Environment](https://docs.visual-layer.com/docs/self-hosting/setting_up.md): Run the Visual Layer installer for GPU or CPU deployments using Docker login credentials.
+- [Troubleshooting](https://docs.visual-layer.com/docs/self-hosting/troubleshooting-self-hosting.md): Resolve common Visual Layer self-hosting issues including Docker errors, database problems, and installation errors.
+- [Useful Scripts](https://docs.visual-layer.com/docs/self-hosting/useful-scripts.md): Collection of Python scripts for automating Visual Layer workflows including custom metadata uploads, DICOM conversion, and caption extraction.
+- [User Management: ADFS (OIDC) Integration Guide](https://docs.visual-layer.com/docs/self-hosting/user-management.md): Integrate your Identity Provider with Visual Layer using OpenID Connect (OIDC) for Single Sign-On authentication.
+- [Terms of Service](https://docs.visual-layer.com/docs/terms-of-service.md): Visual Layer Terms of Service
+- [Troubleshooting](https://docs.visual-layer.com/docs/troubleshooting/troubleshooting-docs.md): Resolve common Visual Layer issues including dataset creation errors, warnings, and general platform problems.
+- [API Comparison](https://docs.visual-layer.com/fastdup_docs_old/API Reference/api-comparison.md): V1 and V0.
+- [V0.2xx API](https://docs.visual-layer.com/fastdup_docs_old/API Reference/v02xx-api.md): This page holds the API reference for fastdup V0.
+- [V1 API](https://docs.visual-layer.com/fastdup_docs_old/API Reference/v1-api.md)
+- [License](https://docs.visual-layer.com/fastdup_docs_old/About Us/license.md)
+- [Face Detection Video Analysis](https://docs.visual-layer.com/fastdup_docs_old/Advanced FEATURES/video-face-detection.md): In this tutorial, we will use fastdup with a pretrained face detection model to detect and crop from videos.
+- [YOLOv5 Object Detection Video Analysis](https://docs.visual-layer.com/fastdup_docs_old/Advanced FEATURES/video-yolov5-detection.md): In this tutorial, we will use fastdup with a pretrained yolov5 object detection model to detect and crop from videos.
+- [Using Cloud Storage (S3/GCP/Min.io)](https://docs.visual-layer.com/fastdup_docs_old/Common Uses/file-list-s3-inputs.md): fastdup allows you to load data from various sources, including cloud storage services and file lists.
+- [Working with tar/tgz/zip files as input](https://docs.visual-layer.com/fastdup_docs_old/Common Uses/outlier-detection-and-analysis.md)
+- [COCO Annotations](https://docs.visual-layer.com/fastdup_docs_old/Common Uses/running-in-aws-gcp.md)
+- [Setting Thresholds for Duplicates and Outliers](https://docs.visual-layer.com/fastdup_docs_old/Common Uses/tuning-run-parameters.md): Several threshold values control the operation of various parts of the fastdup run, and could be used for steering results towards a desired output.
+- [Rotated Bounding Boxes](https://docs.visual-layer.com/fastdup_docs_old/Common Uses/using-labels-and-bounding-boxes.md)
+- [Using Your Own ONNX Model](https://docs.visual-layer.com/fastdup_docs_old/Common Uses/using-your-own-model.md): fastdup ships with a highly efficient and powerful embedding model, but we fully support user using their own models for running the analysis.
+- [Visualizing Data](https://docs.visual-layer.com/fastdup_docs_old/Common Uses/visualizing-data.md): In this tutorial, you will learn how to utilize Fastdup's versatile galleries to facilitate visual data analysis and refinement.
+- [Quick Data Analysis](https://docs.visual-layer.com/fastdup_docs_old/First Steps/getting-started.md)
+- [Installation](https://docs.visual-layer.com/fastdup_docs_old/First Steps/installation.md): Install the fastdup CLI
+- [What's New in Fastdup V1.0](https://docs.visual-layer.com/fastdup_docs_old/First Steps/welcome-to-fastdup-v10.md)
+- [Analyzing Image Classification Dataset](https://docs.visual-layer.com/fastdup_docs_old/Tutorials/analyzing-labeled-images.md): In this tutorial we use fastdup to analyze a labelled image classification dataset for potential issues.
+- [Cleaning Image Dataset](https://docs.visual-layer.com/fastdup_docs_old/Tutorials/cleaning-image-dataset.md): This tutorial shows how to clean an image collection or dataset from the issues found with fastdup.
+- [Analyzing Object Detection Dataset](https://docs.visual-layer.com/fastdup_docs_old/Tutorials/objects-and-bounding-boxes.md): In this tutorial, we will analyze an object detection dataset with bounding boxes and identify potential issues.
+- [Metadata Enrichment with Zero-Shot Classification Models](https://docs.visual-layer.com/fastdup_docs_old/data enrichment/enrichment-zero-shot-classification.md): Enrich your visual data with zero-shot image classification and tagging models such as Recognize Anything, Tag2Text and more.
+- [Metadata Enrichment with Zero-Shot Detection Models](https://docs.visual-layer.com/fastdup_docs_old/data enrichment/enrichment-zero-shot-detection.md): Enrich your visual data with zero-shot image detection models such as Grounding DINO and more to come.
+- [Metadata Enrichment with Zero-Shot Segmentation Models](https://docs.visual-layer.com/fastdup_docs_old/data enrichment/enrichment-zero-shot-segmentation.md): Enrich your visual data with zero-shot segmentations models such as Segment Anything and more.
+- [Run Fastdup on TIMM Embeddings](https://docs.visual-layer.com/fastdup_docs_old/embeddings/embeddings-timm.md): Compute your embeddings using TIMM and run fastdup over the embeddings to analyze for issues.
+- [Run on Pre-Computed Feature Vectors](https://docs.visual-layer.com/fastdup_docs_old/embeddings/run-on-precomputed-feature-vectors.md): If you have existing feature vectors, you can run fastdup over the feature vectors to analyze for issues.
+- [Hugging Face Datasets](https://docs.visual-layer.com/fastdup_docs_old/loading from data sources/hugging-face-datasets.md): Analyze any computer vision datasets from [Hugging Face Datasets](https://huggingface.
+- [Kaggle](https://docs.visual-layer.com/fastdup_docs_old/loading from data sources/kaggle.md): Analyze any computer vision datasets from [Kaggle](https://kaggle.
+- [Roboflow Universe](https://docs.visual-layer.com/fastdup_docs_old/loading from data sources/roboflow-universe.md): Analyze any computer vision datasets from [Roboflow Universe](https://universe.
+- [Visual Layer Documentation](https://docs.visual-layer.com/index.md): Find, fix, and organize visual datasets at scale. Guides, tutorials, and API references for the Visual Layer platform.
+
+## OpenAPI Specs
+
+- [settings](https://docs.visual-layer.com/.vscode/settings.json)

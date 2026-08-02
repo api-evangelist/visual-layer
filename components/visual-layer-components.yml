@@ -1,0 +1,14 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.visual-layer.com/api-reference/running-visual-layer-within-an-iframe
+components:
+- family: Embedded Search
+  name: Visual Layer iframe embed
+  type: iframe
+  description: Embed the Visual Layer search/explore experience directly inside your own web application
+    via an iframe, with seamless user authentication passed through so users do not re-authenticate.
+  docs: https://docs.visual-layer.com/api-reference/running-visual-layer-within-an-iframe
+  surface: hosted UI (app.visual-layer.com) embedded in a host page
+notes: Visual Layer exposes an embeddable hosted UI via iframe integration rather than a client-side web
+  component / element library. No JavaScript element/loader library (custom elements, drop-in widgets)
+  was found in the documentation this pass.

@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.visual-layer.com/api-reference/api-intro + authentication + errors
+authentication:
+  style: JWT bearer (cloud) / none (on-prem)
+  header: 'Authorization: Bearer <jwt>'
+  ref: authentication/visual-layer-authentication.yml
+base_url: https://app.visual-layer.com
+api_path_prefix: /api/v1
+media_type: application/json
+async_processing:
+  supported: true
+  pattern: Long-running operations (dataset creation, enrichment) return 202 Accepted and process
+    asynchronously. Clients poll the dataset status endpoint until status_new reaches READY before
+    running dependent operations.
+  status_field: status_new
+  ready_value: READY
+idempotency:
+  supported: false
+  note: No idempotency-key header or contract is documented for the Visual Layer API.
+pagination:
+  documented: false
+  note: No explicit cursor/offset pagination contract is documented in the public API reference.
+error_envelope:
+  field: detail
+  format: custom (single detail string; not RFC 9457)
+  ref: errors/visual-layer-problem-types.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  ref: lifecycle/visual-layer-lifecycle.yml
+deployment_modes:
+- cloud (app.visual-layer.com, JWT auth)
+- on-premises / self-hosted (no auth)
+rate_limit_signaling:
+  documented: false

@@ -1,0 +1,55 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of /.well-known/* on Visual Layer hosts
+result: none
+note: The app host (app.visual-layer.com) is a single-page application that returns HTTP 200 with the
+  SPA HTML shell (content-type text/html) for every path, including all /.well-known/* paths — i.e. soft
+  404s, not genuine discovery documents. The docs and marketing hosts return real 404s. No authentic
+  RFC 9116 security.txt, OIDC/OAuth discovery, api-catalog, or ai-plugin.json document was found.
+hosts:
+- host: https://app.visual-layer.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    genuine: false
+    note: SPA HTML shell (soft 404)
+  - path: /.well-known/openid-configuration
+    status: 200
+    genuine: false
+    note: SPA HTML shell (soft 404)
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    genuine: false
+    note: SPA HTML shell (soft 404)
+  - path: /.well-known/api-catalog
+    status: 200
+    genuine: false
+    note: SPA HTML shell (soft 404)
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    genuine: false
+    note: SPA HTML shell (soft 404)
+- host: https://docs.visual-layer.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://visual-layer.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

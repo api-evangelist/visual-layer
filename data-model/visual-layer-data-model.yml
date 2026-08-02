@@ -1,0 +1,69 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.visual-layer.com/api-reference/ (dataset, search, saved-views, snapshots, tasks,
+  notifications, workspaces, users)
+note: Entities and relationships derived from the public API reference; no OpenAPI spec is published, so
+  id-prefixes and exact field names are approximate where not stated. Dataset ids are UUIDs (example
+  ad48d250-1232-11f1-bfca-fa39f6ed1f22).
+entities:
+- name: Dataset
+  description: A collection of images/videos created from S3, local files, or a local folder; the root
+    object most operations act on.
+  id: dataset_id (UUID)
+  status_field: status_new (e.g. READY)
+- name: Media
+  description: An individual image or video item within a dataset.
+  id: media_id / anchor_media_id
+- name: SavedView
+  description: A named, monitorable filter query over a dataset; can trigger alerts.
+- name: Snapshot
+  description: A named checkpoint of dataset state for version control, rollback, and cloning.
+- name: EnrichmentModel
+  description: A vision AI model applied to a dataset to generate captions, detect objects, or build
+    embeddings.
+- name: Task
+  description: A tracked dataset operation (creation, enrichment, processing) managed via the task manager.
+- name: Notification
+  description: An alert triggered by a monitored saved view.
+- name: User
+  description: A registered account; datasets can be shared user-to-user.
+- name: Workspace
+  description: A grouping of datasets/members (self-hosted).
+- name: Organization
+  description: Top-level tenant containing workspaces and members (self-hosted).
+relationships:
+- from: Dataset
+  to: Media
+  type: has_many
+  via: dataset_id
+- from: Dataset
+  to: SavedView
+  type: has_many
+  via: dataset_id
+- from: Dataset
+  to: Snapshot
+  type: has_many
+  via: dataset_id
+- from: Dataset
+  to: Task
+  type: has_many
+  via: dataset_id
+- from: SavedView
+  to: Notification
+  type: has_many
+  via: saved_view_id
+- from: Enrichment
+  to: Dataset
+  type: has_one
+  via: dataset_id
+  note: Enrichment creates a new dataset copy.
+- from: Dataset
+  to: User
+  type: belongs_to
+  via: owner
+- from: Workspace
+  to: Dataset
+  type: has_many
+- from: Organization
+  to: Workspace
+  type: has_many
