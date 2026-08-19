@@ -2,10 +2,10 @@ generated: '2026-07-21'
 method: derived
 status: candidate
 source: https://docs.visual-layer.com/api-reference/ (documented REST operations)
-note: No official hosted or packaged Model Context Protocol server was found for Visual Layer (no
-  @modelcontextprotocol package, no registry entry, no docs reference). The tool list below is a
-  CANDIDATE surface derived from the documented Cloud API operations to guide a future MCP server; no
-  OpenAPI spec exists to bind operationIds, so tools reference the API reference pages.
+note: No official hosted or packaged Model Context Protocol server was found for Visual Layer (no @modelcontextprotocol
+  package, no registry entry, no docs reference). The tool list below is a CANDIDATE surface derived from
+  the documented Cloud API operations to guide a future MCP server; no OpenAPI spec exists to bind operationIds,
+  so tools reference the API reference pages.
 server:
   name: visual-layer
   transport: http
@@ -50,3 +50,9 @@ tools:
 - name: share_dataset
   description: Grant another registered user access to a dataset.
   source: https://docs.visual-layer.com/api-reference/share-a-dataset-with-another-user
+deployment:
+  mode: none
+  verified: derived
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
