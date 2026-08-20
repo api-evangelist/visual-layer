@@ -39,6 +39,17 @@ x-enrichment:
   pass: local-v1
 tags:
 - Company
+- Computer-Vision
+- Machine-Learning
+- Data Management
+- Dataset Curation
+- Unstructured Data
+- Image
+- Video
+- Semantic Search
+- Artificial Intelligence
+tags_raw:
+- Company
 - Computer Vision
 - Machine Learning
 - Data Management
@@ -56,6 +67,11 @@ apis:
   humanURL: https://docs.visual-layer.com/api-reference/api-intro
   baseURL: https://app.visual-layer.com
   tags:
+  - Computer-Vision
+  - Dataset Management
+  - Semantic Search
+  - Enrichment
+  tags_raw:
   - Computer Vision
   - Dataset Management
   - Semantic Search
