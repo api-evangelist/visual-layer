@@ -51,8 +51,8 @@ x-enrichment:
   pass: local-v1
 tags:
 - Company
-- Computer-Vision
-- Machine-Learning
+- Computer Vision
+- Machine Learning
 - Data Management
 - Dataset Curation
 - Unstructured Data
@@ -71,6 +71,8 @@ tags_raw:
 - Video
 - Semantic Search
 - AI
+- Computer-Vision
+- Machine-Learning
 apis:
 - name: Visual Layer Cloud API
   description: REST API for dataset management, visual and semantic search, enrichment, export, saved
@@ -79,7 +81,7 @@ apis:
   humanURL: https://docs.visual-layer.com/api-reference/api-intro
   baseURL: https://app.visual-layer.com
   tags:
-  - Computer-Vision
+  - Computer Vision
   - Dataset Management
   - Semantic Search
   - Enrichment
@@ -88,6 +90,7 @@ apis:
   - Dataset Management
   - Semantic Search
   - Enrichment
+  - Computer-Vision
   properties:
   - type: APIReference
     url: https://docs.visual-layer.com/api-reference/api-intro
