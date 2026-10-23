@@ -23,6 +23,13 @@
       "method": "discovered"
     },
     {
+      "source": "https://visual-layer.com/blog/rss.xml",
+      "feed_url": "https://visual-layer.com/blog/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://docs.visual-layer.com/docs/quick-start/navigating-visual-layer",
       "feed_url": "https://docs.visual-layer.com/docs/quick-start/navigating-visual-layer",
       "title": "",
@@ -30,6 +37,6 @@
       "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 12,
+  "fetched": "2026-10-17T14:53:57Z"
 }
